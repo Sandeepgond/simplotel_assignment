@@ -1,0 +1,279 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    background-color: rgb(48, 47, 47);
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+#navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+}
+.nav_list{
+    margin-left: 10%;
+}
+.nav_list a {
+    color: black;
+    letter-spacing: 3px;
+}
+.nav_icon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right:5%;
+}
+.nav_icon>div{
+    cursor: pointer;
+}
+.menu {
+    display: flex;
+    gap: 2.5em;
+    font-size: 18px;
+}
+input[type="checkbox"] {
+    display: none;
+}
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+#mid_section{
+    border: .1px solid rgb(218, 216, 216);
+    height: 750px;
+    overflow: hidden;
+    background: linear-gradient(80deg, #f74f9d, #fd9f5f, #f7da3a);
+}
+#mid_section>img{
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    display: block;
+    transition: transform 1s;
+}
+#mid_section:hover>img{
+    transform: scale(1.02);   
+}
+.overlap_box{
+    background-color:rgb(207, 91, 91);
+    color: white;
+    position: relative;
+    opacity: 80%;
+    width: 35%;
+    margin-left: 10%;
+    margin-top: 15%;
+    padding: 2rem;
+}
+.overlap_box>h1{
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size:35px;
+    margin-top: -10px;
+}
+.overlap_box>p{
+    padding-right: 18%;
+    letter-spacing: 1px;
+    line-height: 23px;
+    font-size: 12px;
+    margin-top: -10px;
+}
+#order_card{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+}
+#order_card>div{
+    /* border: 1px solid green ; */
+    width: 25%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    background-color: white;
+    cursor: pointer;
+}
+.image_container{
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
+    overflow: hidden;
+}
+.image_container>img{
+    width: 100%;
+    height: 200px;
+    border-top-right-radius: 25%;
+    transition: transform 0.7s;
+}
+.image_container:hover>img{
+    transform: scale(1.2);   
+}
+.sub_div2{
+    text-align: center;
+    opacity: 85%;
+}
+.sub_div2>p{
+    padding: 0 50px;
+    color: rgb(117, 117, 117);
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: -10px;
+}
+#last_div{
+    text-align: center;
+    background: linear-gradient(80deg, #f74f9d, #fd9f5f, #f7da3a);
+    padding-bottom: 70px;
+}
+#last_div>h1{
+    color: white;
+    letter-spacing: 3px;
+    font-size: 35px;
+    padding-top: 20px;
+}
+.btn{
+    padding: 10px 50px;
+    border: none;
+    margin-top: 80px;
+    font-weight: bolder;
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: #f7b68b;
+    cursor: pointer;
+}
+
+
+@media (max-width: 900px) {
+    .menu {
+        display: none;
+        position: absolute;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        background-color: rgba(255, 255, 255, 0.89);
+        width: 30%;
+        margin-left: auto;
+    }
+    #navbar {
+        justify-content: flex-end;
+    }
+    .menu li+li {
+        margin-top: 12px;
+    }
+    input[type="checkbox"]:checked~.menu {
+        display: block;
+    }
+    .hamburger {
+        display: flex;
+        align-items: flex-end;
+        color: black;
+    }
+    .nav_icon {
+         display: none;
+    }
+    #mid_section{
+        height: 550px;
+    }
+    #mid_section>img{
+        height: 550px;  
+    }
+    .overlap_box{
+        width: 50%;
+        margin-left: 15%;
+        margin-top: 20%;
+        padding: 1.5rem 1rem 1rem 1.5rem;
+    }
+    .overlap_box>p{
+        padding-right: 5%;
+        line-height: 20px;
+    }
+    #order_card{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+        width: 80%;
+    }
+    #order_card>div{
+        width: 95%;
+    }
+
+    .sub_div2>p{
+        padding: 0 20px;           
+        line-height: 16px;
+    }
+    .btn{
+        margin-top: 60px;
+        font-weight: bold; 
+    }
+}
+
+
+@media (max-width: 500px) {
+    .menu {
+        display: none;
+        position: absolute;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        background-color: rgba(255, 255, 255, 0.89);
+        width: 30%;
+        margin-left: auto;
+    }
+    #navbar {
+        justify-content: flex-end;
+    }
+    .menu li+li {
+        margin-top: 12px;
+    }
+    input[type="checkbox"]:checked~.menu {
+        display: block;
+    }
+    .hamburger {
+         display: flex;
+         align-items: flex-end;
+         color: black;
+    }
+    .nav_icon {
+         display: none;
+    }
+    #mid_section{
+        height: 450px;
+    }
+    #mid_section>img{
+        height: 450px;  
+    }
+    .overlap_box{
+        width: 70%;
+        margin: auto;
+        margin-top: 25%;
+    }
+    #order_card{
+        grid-template-columns: repeat(1,1fr);
+        width: 80%;
+        margin: auto;
+    }
+    #order_card>div{
+        width: 85%;
+        margin: auto;
+    }
+    
+    .sub_div2>p{
+        padding: 0 20px;           
+        line-height: 16px;
+    }
+    .btn{
+        margin-top: 60px;
+        font-weight: bold; 
+    }
+}
